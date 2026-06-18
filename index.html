@@ -452,5 +452,13 @@
 
     <!-- Scripts entrypoint loaded natively via vite -->
     <script type="module" src="/src/main.ts"></script>
+    <script>
+    // Force skip intro on click
+    document.querySelector('button:contains("Skip Intro")').addEventListener('click', () => {
+        // Change these IDs to match whatever your actual wrapper container IDs are!
+        document.getElementById('screen-loading').style.display = 'none'; 
+        document.getElementById('screen-dashboard').style.display = 'flex';
+    });
+</script>
   </body>
 </html>
